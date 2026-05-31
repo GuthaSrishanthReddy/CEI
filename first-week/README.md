@@ -141,6 +141,8 @@ I used `index=False` so that Pandas does not add an extra index column to the sa
 
 ## Brief Summary
 
-In this task, I loaded the combined product dataset into Pandas and explored its structure, columns, data types, and missing values. I cleaned missing values by using meaningful placeholders for text columns and `0` for missing discounts. I selected useful columns, filtered high-rated products, removed duplicate products using `product_id`, created a new derived column called `calculated_final_price`, and saved the cleaned data into `cleaned_Combined_dataset.csv`.
+In this notebook, I worked with the combined product dataset and went through the basic Pandas workflow step by step. First, I loaded the CSV file and checked the first few rows to understand what kind of data I was dealing with. After that, I explored the shape, column names, data types, and missing values so I could decide what needed cleaning.
 
-The cleaned dataset is now ready for further analysis or visualization.
+For missing values, I used simple and understandable replacements. Since most of the missing columns were text-based, I filled them with values like `Unknown`, `No Video`, `No Variants`, and `No comments`. For missing discounts, I used `0` because a blank discount can be treated as no discount. I also removed duplicate products using `product_id`, filtered some high-rated products, and created a new column called `calculated_final_price` to calculate the price after discount.
+
+At the end, I saved the cleaned dataset as `cleaned_Combined_dataset.csv`. This makes the data easier to use for future analysis, visualization, or any further project work.
