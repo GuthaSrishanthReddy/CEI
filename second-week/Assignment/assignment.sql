@@ -1,23 +1,5 @@
 -- Explore data
 DESCRIBE `superstore`;
-SELECT *
-FROM `superstore`
-LIMIT 10;
-
--- Validate Dataset
-SELECT COUNT(*) AS total_rows
-FROM `superstore`;
-
-SELECT COUNT(DISTINCT `Customer ID`) AS unique_customers
-FROM `superstore`;
-
-SELECT
-    SUM(CASE WHEN Sales IS NULL THEN 1 ELSE 0 END) AS null_sales,
-    SUM(CASE WHEN Profit IS NULL THEN 1 ELSE 0 END) AS null_profit
-FROM `superstore`;
-
--- WHERE Filters-- Explore data
-DESCRIBE `superstore`;
 
 SELECT *
 FROM `superstore`
@@ -134,14 +116,13 @@ FROM `superstore`
 GROUP BY year
 ORDER BY year;
 
-SELECT 
+SELECT
     YEAR(STR_TO_DATE(`Order Date`, '%m/%d/%Y')) AS year,
     MONTH(STR_TO_DATE(`Order Date`, '%m/%d/%Y')) AS month,
     ROUND(SUM(Sales), 2) AS monthly_sales
-FROM
-    `superstore`
-GROUP BY year , month
-ORDER BY year , month;
+FROM `superstore`
+GROUP BY year, month
+ORDER BY year, month;
 
 SELECT
     Category,
