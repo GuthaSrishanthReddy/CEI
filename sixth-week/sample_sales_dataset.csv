@@ -1,0 +1,101 @@
+order_id,order_date,customer_name,region,category,quantity,unit_price,sales,discount,returned
+1,2025-06-13,Eva,South,Electronics,2,49.99,99.98,5,Yes
+2,2025-06-23,John,West,Electronics,9,49.99,449.91,0,Yes
+3,2025-02-25,John,North,Office Supplies,4,199.99,799.96,5,No
+4,2025-02-26,Eva,North,Electronics,8,199.99,1599.92,15,No
+5,2025-03-13,Farah,North,Electronics,3,79.99,239.97,15,Yes
+6,2025-04-02,Eva,North,Office Supplies,6,199.99,1199.94,15,Yes
+7,2025-04-07,Eva,East,Office Supplies,2,199.99,399.98,5,Yes
+8,2025-01-12,Eva,North,Electronics,4,,,0,No
+9,2025-03-13,Farah,South,Furniture,8,299.99,2399.92,10,Yes
+10,2025-06-21,Bob,South,Office Supplies,5,299.99,1499.95,5,Yes
+11,2025-04-29,Ishaan,South,Office Supplies,7,99.99,699.93,10,Yes
+12,2025-02-28,Farah,West,Furniture,1,,,0,Yes
+13,2025-05-26,Helen,West,Office Supplies,6,79.99,479.94,15,Yes
+14,2025-03-09,Ishaan,East,Office Supplies,3,79.99,239.97,,No
+15,2025-05-30,David,South,Office Supplies,7,99.99,699.93,15,Yes
+16,2025-01-13,Charlie,West,Office Supplies,2,79.99,159.98,0,No
+17,2025-04-08,Ishaan,East,Office Supplies,10,149.99,1499.9,0,Yes
+18,2025-06-24,Eva,East,Electronics,9,,,10,No
+19,2025-02-10,Eva,South,Office Supplies,8,49.99,399.92,0,No
+20,2025-06-13,David,South,Furniture,9,199.99,1799.91,5,Yes
+21,2025-06-03,Alice,North,Furniture,6,149.99,899.94,10,Yes
+22,2025-01-15,Bob,North,Office Supplies,4,199.99,799.96,15,Yes
+23,2025-05-17,Helen,South,Furniture,3,79.99,239.97,,No
+24,2025-02-24,David,East,Furniture,9,,,10,No
+25,2025-05-13,David,South,Electronics,8,49.99,399.92,10,Yes
+26,2025-05-31,John,South,Electronics,9,79.99,719.91,0,Yes
+27,2025-02-28,Farah,North,Office Supplies,2,49.99,99.98,5,No
+28,2025-06-21,Ishaan,South,Office Supplies,8,79.99,639.92,,No
+29,2025-03-04,George,South,Electronics,8,,,0,No
+30,2025-04-01,Helen,North,Office Supplies,7,149.99,1049.93,0,Yes
+31,2025-04-14,Bob,South,Electronics,6,,,5,No
+32,2025-02-05,Eva,West,Electronics,7,79.99,559.93,0,No
+33,2025-05-21,Ishaan,North,Electronics,2,49.99,99.98,5,Yes
+34,2025-04-15,David,West,Electronics,8,149.99,1199.92,5,No
+35,2025-01-01,Helen,East,Furniture,7,99.99,699.93,,No
+36,2025-02-09,David,North,Office Supplies,4,99.99,399.96,,Yes
+37,2025-03-22,John,West,Office Supplies,1,49.99,49.99,,Yes
+38,2025-01-15,Charlie,North,Office Supplies,9,49.99,449.91,0,Yes
+39,2025-04-14,David,North,Office Supplies,2,199.99,399.98,0,No
+40,2025-06-18,Ishaan,East,Furniture,10,199.99,1999.9,5,No
+41,2025-03-03,Charlie,East,Furniture,5,149.99,749.95,10,Yes
+42,2025-01-03,John,North,Electronics,8,199.99,1599.92,,Yes
+43,2025-05-10,Farah,North,Electronics,5,79.99,399.95,10,No
+44,2025-02-10,Ishaan,East,Office Supplies,8,,,,Yes
+45,2025-06-20,Bob,South,Furniture,9,99.99,899.91,0,Yes
+46,2025-05-22,Eva,South,Office Supplies,3,99.99,299.97,10,Yes
+47,2025-06-25,Helen,East,Electronics,5,199.99,999.95,0,No
+48,2025-03-12,Farah,South,Office Supplies,1,49.99,49.99,10,Yes
+49,2025-04-24,George,North,Electronics,9,299.99,2699.91,0,Yes
+50,2025-05-20,Farah,South,Furniture,1,,,5,Yes
+51,2025-03-20,Alice,East,Electronics,6,,,5,Yes
+52,2025-04-01,George,South,Electronics,9,,,5,Yes
+53,2025-04-16,Farah,West,Office Supplies,1,79.99,79.99,5,No
+54,2025-02-10,Alice,West,Electronics,2,149.99,299.98,5,No
+55,2025-03-31,David,South,Electronics,5,,,5,No
+56,2025-03-26,Bob,East,Furniture,5,,,,No
+57,2025-06-23,Alice,North,Furniture,9,99.99,899.91,5,No
+58,2025-01-10,George,East,Office Supplies,2,199.99,399.98,10,No
+59,2025-06-05,George,South,Furniture,9,49.99,449.91,0,No
+60,2025-01-01,Ishaan,South,Furniture,9,,,15,Yes
+61,2025-06-20,Farah,North,Office Supplies,6,199.99,1199.94,10,No
+62,2025-06-20,George,East,Office Supplies,7,99.99,699.93,5,Yes
+63,2025-04-18,Charlie,East,Furniture,7,299.99,2099.93,,Yes
+64,2025-03-19,George,East,Furniture,5,79.99,399.95,15,No
+65,2025-06-22,Helen,South,Office Supplies,4,199.99,799.96,0,No
+66,2025-05-12,Bob,South,Office Supplies,10,99.99,999.9,10,Yes
+67,2025-02-20,Alice,South,Furniture,3,49.99,149.97,,Yes
+68,2025-04-27,John,South,Office Supplies,7,299.99,2099.93,15,No
+69,2025-04-13,Alice,North,Furniture,4,79.99,319.96,5,Yes
+70,2025-06-28,Alice,South,Electronics,9,149.99,1349.91,15,Yes
+71,2025-04-29,John,East,Furniture,9,199.99,1799.91,,No
+72,2025-05-21,Helen,West,Furniture,8,79.99,639.92,5,No
+73,2025-05-14,David,East,Furniture,8,299.99,2399.92,0,No
+74,2025-03-02,Farah,North,Electronics,5,99.99,499.95,5,Yes
+75,2025-04-09,David,North,Furniture,3,299.99,899.97,15,No
+76,2025-05-19,Alice,South,Furniture,8,149.99,1199.92,15,Yes
+77,2025-05-28,Alice,East,Furniture,7,149.99,1049.93,15,No
+78,2025-05-18,John,South,Furniture,9,,,5,No
+79,2025-04-22,George,East,Office Supplies,8,49.99,399.92,15,Yes
+80,2025-04-30,Ishaan,North,Furniture,3,199.99,599.97,,Yes
+81,2025-01-22,Helen,South,Electronics,7,79.99,559.93,10,No
+82,2025-03-25,Farah,East,Furniture,4,149.99,599.96,10,No
+83,2025-03-06,Alice,North,Furniture,2,149.99,299.98,5,Yes
+84,2025-06-16,Alice,South,Electronics,1,,,0,Yes
+85,2025-03-03,Bob,South,Furniture,3,149.99,449.97,10,No
+86,2025-02-12,Bob,South,Furniture,10,199.99,1999.9,0,Yes
+87,2025-03-21,George,West,Office Supplies,10,299.99,2999.9,5,Yes
+88,2025-06-01,Eva,North,Office Supplies,4,49.99,199.96,0,No
+89,2025-05-17,Farah,North,Office Supplies,7,299.99,2099.93,10,Yes
+90,2025-04-18,George,East,Office Supplies,8,49.99,399.92,15,Yes
+91,2025-04-22,Ishaan,East,Office Supplies,3,299.99,899.97,,No
+92,2025-04-30,John,East,Furniture,7,,,5,Yes
+93,2025-03-13,Helen,West,Furniture,8,79.99,639.92,0,No
+94,2025-03-25,David,East,Furniture,3,149.99,449.97,10,No
+95,2025-06-02,Alice,South,Electronics,5,199.99,999.95,5,No
+96,2025-05-06,David,West,Office Supplies,9,,,15,No
+97,2025-01-05,David,West,Office Supplies,2,99.99,199.98,5,No
+98,2025-06-19,Helen,East,Furniture,10,99.99,999.9,,No
+99,2025-04-01,Eva,East,Electronics,8,99.99,799.92,0,Yes
+100,2025-03-22,Ishaan,South,Electronics,2,299.99,599.98,5,No
