@@ -6,35 +6,35 @@ Apache Spark follows a master-worker architecture.
 
 ### Driver
 
-      - |
-      - |
-      - |
-      - |
-      - v
+-       |
+-       |
+-       |
+-       |
+-       v
 
 ### Cluster Manager
 
-      - |
-      - |
-      - |
-      - |
-      - v
+-       |
+-       |
+-       |
+-       |
+-       v
 
 ### Executors
 
-      - |
-      - |
-      - |
-      - |
-      - v
+-       |
+-       |
+-       |
+-       |
+-       v
 
 ### Execution Modes
 
-      - |
-      - |
-      - |
-      - |
-      - v
+-       |
+-       |
+-       |
+-       |
+-       v
 
 ## 2. Lazy Evaluation
 
