@@ -32,11 +32,6 @@ Apache Spark follows a master-worker architecture.
 
 ### Execution Modes
 
-       |
-       |
-       |
-       |
-       v
 
 
 ## 2. Lazy Evaluation
