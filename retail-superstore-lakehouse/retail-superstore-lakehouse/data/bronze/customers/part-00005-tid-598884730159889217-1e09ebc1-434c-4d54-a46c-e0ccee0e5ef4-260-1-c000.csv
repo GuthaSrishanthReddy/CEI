@@ -1,0 +1,126 @@
+customer_id,customer_name,email,phone,dob,address,city,state,signup_date
+CUS000376,Cameron Thompson,phuff@example.com,4972281863,2004-01-11,3052 Lisa Stravenue,Robertchester,Louisiana,2025-06-05
+CUS000377,Christine Smith,ericbutler@example.com,2740948317,1961-07-09,954 Jared Ferry,Hardingburgh,Idaho,2024-02-02
+CUS000378,John Graham,hallscott@example.net,3733106343,1982-10-26,39714 Kevin Tunnel Apt. 682,Lake Danielton,Louisiana,2022-07-24
+CUS000379,Jennifer Craig,vincentjackson@example.net,4987251738,2006-11-29,1904 Andrew Burg Suite 151,Courtneyshire,Missouri,2025-06-30
+CUS000380,Deborah Price,mariah74@example.com,5551265855,1963-07-29,969 Gary Lakes,Schmidthaven,Hawaii,2022-12-15
+CUS000381,Monica Lopez,carlsoncarlos@example.org,1367459929,1960-09-11,552 Andrew Mountains,Johnbury,West Virginia,2024-08-05
+CUS000382,Gail Brown,smithsandra@example.com,678120489,1997-03-02,1056 Garcia Station,Port Derek,Alabama,2021-08-28
+CUS000383,Darrell Collins,guerrerobenjamin@example.com,2871128709,2000-02-25,243 Vang Station,Lake Carlahaven,Alaska,2023-02-14
+CUS000384,Andrew Chapman,dixonvincent@example.net,6669526882,1970-09-17,00600 Garcia Loaf Suite 929,West Brianside,New Hampshire,2022-12-14
+CUS000385,Jeff Martin,dreilly@example.org,6637388708,1961-03-12,22906 Brandon Parks Suite 899,Kathrynberg,Nevada,2025-05-28
+CUS000386,Justin Johnson,nina19@example.com,1243139687,1990-04-11,5333 Erika Brook Apt. 605,Lake Kellymouth,South Carolina,2025-08-21
+CUS000387,Mary Parker,oramirez@example.org,4647401210,1984-05-24,043 Gina Green,Navarroview,Hawaii,2023-03-06
+CUS000388,Robin Sanchez,reedmolly@example.org,4731295914,2001-01-07,12422 Underwood Station,Port Destinymouth,Indiana,2022-05-25
+CUS000389,Melissa Rodriguez,pfarmer@example.com,5544093454,1984-12-04,59797 Smith Stream Apt. 775,South Courtneymouth,Wyoming,2023-12-06
+CUS000390,Emily Campos,alibrandon@example.net,2060168539,1982-10-02,353 Williams Meadow,Keithborough,Oklahoma,2024-02-27
+CUS000391,Megan Yoder,david78@example.com,3327029586,1976-03-04,663 Kevin Burgs,East Richardchester,Wisconsin,2025-09-30
+CUS000392,Nicole Davis,gbrown@example.org,379173328,2003-11-24,6789 Shannon Roads Suite 105,Lake Richard,Florida,2021-09-23
+CUS000393,Gabriella Gonzales,taylorray@example.org,1601204669,1986-07-06,031 Williams Vista Suite 330,Steveborough,Missouri,2023-03-15
+CUS000394,Connie Black,colemaria@example.org,8835620804,1991-01-26,939 Jackson Crossing,Codyport,South Dakota,2025-07-28
+CUS000395,John Webb,karenmaddox@example.org,9048457081,1998-12-14,671 Melvin Manors Apt. 277,Paynebury,Missouri,2023-01-08
+CUS000396,Jason Powers,stephanie57@example.net,729851400,1992-10-18,601 Acosta Summit,East Katherine,Alaska,2023-07-12
+CUS000397,John Pena,agreen@example.net,150727145,1974-09-21,525 Washington Drives Apt. 919,Heatherhaven,Mississippi,2023-06-30
+CUS000398,Roger Williams DVM,raymond46@example.net,7842598800,1973-09-22,357 Waters Parks Suite 839,Murrayfurt,Tennessee,2023-04-13
+CUS000399,Barbara Bennett,starkashley@example.com,175213566,1992-11-09,09925 Carrie Rapids Apt. 134,New Kelly,Arkansas,2022-10-08
+CUS000400,Michael Perez,kathy45@example.com,1440627495,1983-05-02,276 Townsend Mountains Apt. 468,Lake Susanmouth,West Virginia,2024-11-09
+CUS000401,Pamela Wiley,shawbrian@example.net,4087814820,1991-06-20,3650 Hampton Circle Apt. 316,East Paulachester,Florida,2024-04-10
+CUS000402,Carl Jones,jonesmark@example.com,8660418699,2006-09-30,19869 Ryan Extension,Port Aprilville,Kentucky,2025-03-23
+CUS000403,Michelle Hicks MD,ukidd@example.net,1963194437,1969-11-14,002 Cohen Freeway Apt. 224,Port Heatherstad,New Mexico,2025-03-17
+CUS000404,Sean Larson,qshannon@example.net,8098425454,1996-07-28,0442 Reeves Lakes Suite 155,Amandaport,Oklahoma,2025-11-30
+CUS000405,Andrea Phillips MD,chad96@example.com,7248288869,2005-06-05,72071 Foley Ports Apt. 523,West Angela,Pennsylvania,2022-07-22
+CUS000406,Miss Sheila Mathis,jennifer45@example.net,2573693389,1982-02-11,11478 Campbell Valleys Suite 831,Haynesberg,Mississippi,2025-10-10
+CUS000407,Jorge Gregory,karen22@example.net,9412613570,2001-08-13,369 Powell Flat,South Joan,Idaho,2024-09-30
+CUS000408,Gabriella Davis,paige99@example.org,4678294861,1978-11-18,4518 Nguyen Manor Apt. 974,Port Elizabethmouth,Utah,2023-02-27
+CUS000409,Juan Richardson,josephwheeler@example.net,9132369789,1964-07-04,2031 Smith Divide,North Blaketown,Vermont,2025-09-28
+CUS000410,Joseph Parker,cookjeffrey@example.org,7270428924,2004-04-12,305 Sandy Mountains Apt. 434,Port Patriciabury,Arkansas,2024-05-11
+CUS000411,Madison Allen,xshannon@example.com,2486488060,2007-08-11,95819 Glenn Field Suite 950,West Laura,Wisconsin,2025-03-12
+CUS000412,Jessica Anderson,johnsoncheryl@example.net,1108084789,2006-06-29,39224 Miller Mills Apt. 642,Murphyton,Ohio,2023-09-16
+CUS000413,John Mitchell,amanda63@example.net,9343132902,2000-12-18,1817 Timothy Estate,Fostershire,Delaware,2024-09-26
+CUS000414,Kelsey Merritt,marymartinez@example.com,4104574927,1999-01-29,415 Kristy Divide Apt. 370,Ortegaville,Georgia,2023-09-02
+CUS000415,Stephen Price,jessicaprice@example.net,6805608257,1967-05-01,493 Elizabeth Port,Port Kevinborough,New Mexico,2023-10-15
+CUS000416,Renee James,jeffreysmith@example.org,924550952,1963-10-09,29121 Brown Gateway Suite 029,Salasfurt,Delaware,2025-01-13
+CUS000417,Richard Guzman,sandy06@example.org,9922371656,1961-10-11,5847 Shea Brooks,South Frankfort,California,2022-12-31
+CUS000418,Alexis Rogers,spratt@example.org,8568353148,1964-08-18,7302 Debra Island,Port Jeremy,Louisiana,2024-08-16
+CUS000419,Debra Lewis,michael09@example.com,8224159388,1985-01-15,603 Rogers Loaf Apt. 258,Melindamouth,Alabama,2022-01-09
+CUS000420,Marissa Foster,quinnwendy@example.org,9120390244,2008-03-15,0652 Herrera Mews,South Christopher,Connecticut,2023-12-08
+CUS000421,Kathryn Williams,bryan75@example.com,4518201743,1990-02-24,264 Horton Prairie,Kristenfort,South Carolina,2023-10-28
+CUS000422,Jacob Adams,duane00@example.org,2291433828,1993-11-13,507 Ray Forges,Haleyland,Connecticut,2024-02-06
+CUS000423,Jessica Johnson,phillip67@example.com,4414379146,1965-09-10,9350 Amanda Course,Elliottchester,Georgia,2026-04-13
+CUS000424,Sean Robinson,brandonwells@example.net,2405179996,1992-08-11,91237 John Light Suite 156,Lake Virginia,Arizona,2025-04-01
+CUS000425,Marvin Sparks,brandon51@example.org,623370494,1985-06-28,35289 Jodi Plain,Taylorchester,Iowa,2022-07-07
+CUS000426,Tammy Roberson,ndavis@example.org,9238248202,2008-03-10,916 Cody Fields Suite 393,Collinsshire,Nevada,2025-07-29
+CUS000427,Alyssa Baker,nicholas09@example.org,6255290456,1963-12-31,3134 Webb Fall,Williamschester,North Carolina,2023-08-13
+CUS000428,Jill Boyer,xkirk@example.com,30398739,1984-10-28,5941 Matthew Manors,Kevinshire,Vermont,2021-12-27
+CUS000429,Lisa Weeks,calderonrebekah@example.com,8745429233,2005-07-05,4656 Jerry Canyon,Adrienneland,Oklahoma,2022-01-01
+CUS000430,Mrs. Monique Schwartz MD,acostajason@example.org,6916052291,1973-05-04,42412 Kathy Overpass,Alexisside,Alaska,2022-11-06
+CUS000431,Bethany Lamb,deborah34@example.com,121488060,2001-01-21,359 Jessica Plaza Suite 465,New William,Missouri,2025-01-12
+CUS000432,Nicole Greer,carla89@example.com,5309658857,1974-09-02,2078 Jordan Brooks Apt. 651,Santiagofort,South Carolina,2025-10-05
+CUS000433,Gary Wallace,jodi09@example.org,3951780075,1986-10-03,43609 Orozco Corner Suite 699,New Devonfort,New Jersey,2022-08-22
+CUS000434,Charles Roman,curtisperry@example.com,6290201348,1998-02-03,02442 Lori Villages,Johnstad,Michigan,2023-03-31
+CUS000435,Yolanda Warren,bankssteven@example.org,280955886,1991-06-13,933 Merritt Brooks,West Laceytown,Indiana,2023-04-13
+CUS000436,Eric Wright,nelsonbrandon@example.org,4668097003,1966-11-13,3689 Ruiz Causeway Apt. 268,New Lauraland,New Mexico,2025-09-27
+CUS000437,Robert Ramirez,vallen@example.org,1304289646,1979-10-30,9611 Moss Springs,Ellischester,Louisiana,2025-02-01
+CUS000438,Amber Cervantes,kimsean@example.org,991102120,1986-05-23,1009 Rodriguez Rapids Apt. 694,West Melissa,Vermont,2022-11-20
+CUS000439,Carlos Davidson,williamsjustin@example.com,5755915371,1960-10-07,211 Hardy Crescent Suite 147,Gregoryport,Colorado,2025-03-11
+CUS000440,John Weeks,brandiwhite@example.com,4240790476,1974-10-16,87128 Nicole Plains,North Donald,Nevada,2021-07-19
+CUS000441,Thomas Rivera,ppowell@example.org,2141892016,1974-07-06,428 Cantrell Circles Suite 177,North Dawn,Vermont,2022-11-21
+CUS000442,Crystal Wilson,davidcasey@example.org,1858553783,1996-02-13,92737 Chavez Cliff,Christopherstad,Pennsylvania,2022-05-18
+CUS000443,Daniel Potter,hhowell@example.com,2423005217,1964-06-29,744 Christina Estate Suite 419,New Robertshire,Hawaii,2021-08-20
+CUS000444,Denise Herman,joannehamilton@example.com,6127310686,1985-07-09,22806 Elizabeth Tunnel Suite 268,New Nicole,West Virginia,2026-01-19
+CUS000445,Kimberly Obrien,iadams@example.com,9491968767,1995-06-13,492 Eric Isle,South Jason,Maine,2025-02-21
+CUS000446,Johnny Allen,pricemelissa@example.org,1294562314,1979-08-05,7266 Susan Inlet,Martinezland,Nevada,2024-02-07
+CUS000447,Kimberly Thomas,whaley@example.net,8764763032,1975-10-17,8470 Michael Port,Nicholasborough,South Carolina,2024-05-01
+CUS000448,Brooke Moreno,wallacejill@example.com,3120445084,1988-04-19,5811 Torres Turnpike,Amandabury,Kansas,2022-01-19
+CUS000449,Travis Collins,williamsann@example.net,2915670270,1977-02-25,4707 Kimberly Villages Apt. 717,Johnland,Massachusetts,2025-07-26
+CUS000450,Katie Andrade,colin60@example.net,1236618518,1976-04-13,450 Arias Plaza Apt. 468,Danielbury,Wyoming,2023-09-01
+CUS000451,Jonathan Watkins,dunlapterri@example.org,6322216536,1979-04-27,932 Pacheco Corners Suite 211,Lake Paulshire,Wyoming,2022-05-11
+CUS000452,Brian Potter,jguerrero@example.net,8371750715,1962-04-12,9011 Santiago Shoals Apt. 524,Lake Brittanybury,Michigan,2022-01-01
+CUS000453,Diamond Anderson,stephaniebeltran@example.com,934017557,1963-12-19,845 Jane Green,East Ashley,Connecticut,2023-03-13
+CUS000454,Regina Jenkins,adriana64@example.org,5597219801,1968-10-05,87075 Debra Squares,North Barbara,Nevada,2022-09-28
+CUS000455,Mrs. Michele Lindsey,aramos@example.com,7229225981,1975-12-17,1042 Barbara Plains Apt. 944,Sullivanstad,Louisiana,2026-04-27
+CUS000456,Kristin Jennings,wilsonsara@example.org,716177414,1975-09-20,2743 Serrano Key Suite 590,Johnsonhaven,Alaska,2026-01-21
+CUS000457,David Barnes,syu@example.org,9048247846,1975-01-16,434 Cannon Drives Suite 469,New Christopherbury,Kansas,2022-01-21
+CUS000458,Kathleen Ramirez MD,christopherhamilton@example.net,5908262739,1987-12-31,66591 David Ville,Bergerland,Florida,2023-05-17
+CUS000459,Brian Wells,epayne@example.com,9034559127,1998-06-02,91160 Roman Passage,Port Kellyland,Wyoming,2025-08-26
+CUS000460,Sheena Hill,nprice@example.org,7790965739,1968-03-11,012 Bradley Mountain,Bergview,Louisiana,2024-02-25
+CUS000461,Craig Atkinson,sarahmoore@example.org,1876615645,1976-05-15,2757 Justin Prairie Suite 917,Lake Jamesberg,Arkansas,2021-08-16
+CUS000462,Michelle Richard,jill36@example.com,888822905,2000-11-21,951 Andrea Forest,Garciafurt,Kansas,2021-09-21
+CUS000463,Allen Garcia,keith83@example.com,4894985782,1986-05-03,5284 Leah Way Apt. 581,North Andrewchester,Hawaii,2021-08-28
+CUS000464,Tina Martinez,owensaustin@example.com,7580990923,1991-06-05,4755 Grant Point,East Jodi,Alabama,2026-02-12
+CUS000465,Jeremy Simmons,anthony77@example.net,6369566200,1992-12-12,114 Griffith Lane Suite 603,South Grant,New York,2022-10-17
+CUS000466,Amy Murillo,njackson@example.com,4295982942,1972-07-09,56806 Kelli Fall,North Stephaniemouth,Kansas,2024-03-15
+CUS000467,Julia Pennington,sharon39@example.org,8515670335,1988-06-16,27821 Davis Green Suite 403,East Stacey,Delaware,2023-10-26
+CUS000468,Carmen Bennett,qpham@example.org,5756783672,1971-03-29,097 Maria Corners Suite 498,New Paulmouth,Ohio,2024-08-21
+CUS000469,Theresa Hernandez,barkermichael@example.org,7549690097,1976-02-23,83351 King Skyway Suite 769,New Johnnyville,Alabama,2021-07-20
+CUS000470,Shelley Huerta,daniel92@example.com,8811598449,2001-02-08,75335 Henry Highway,Diazstad,New York,2025-03-11
+CUS000471,Wendy Nolan,steven93@example.org,1130267179,1968-07-29,4302 Helen Haven,Markmouth,Idaho,2026-03-21
+CUS000472,Edward Sanchez,ronnielee@example.net,943834985,1962-01-28,8470 Berry Heights Apt. 574,New Lynn,New Mexico,2023-05-27
+CUS000473,Lisa Pierce,kelly49@example.org,9019140644,1966-04-05,992 Gentry Drives,Lake Brianna,West Virginia,2022-03-25
+CUS000474,Robin Walker,cheyenneandrade@example.net,7574192708,2008-05-31,1504 Lane Curve,Lake Courtney,Arizona,2024-02-06
+CUS000475,Kerry Riggs,fisherstacey@example.net,2681552411,2006-04-14,58864 George Crescent Suite 270,Patrickfurt,Wyoming,2023-10-28
+CUS000476,Guy Ramirez,joshua47@example.org,3509624724,1983-08-28,7710 Patton Turnpike,Lake Kristin,Arizona,2026-01-02
+CUS000477,Stephen Anderson,yeverett@example.net,1770399566,1972-02-07,641 Nancy Tunnel Suite 158,West Danielland,Colorado,2023-06-15
+CUS000478,Jennifer Santos,gjimenez@example.com,9106397105,1964-12-20,6561 Moody Rapids Apt. 613,Port Donald,Ohio,2022-11-19
+CUS000479,Paula Cross,owenslori@example.com,415063993,2002-03-26,898 Holmes Overpass Suite 569,Ericmouth,Florida,2023-09-06
+CUS000480,Kelly Hull,anthony48@example.com,7718233969,1967-03-09,907 Grant Station Apt. 225,Bookerstad,California,2025-09-03
+CUS000481,Meagan Silva,eduncan@example.org,3723790927,1971-01-07,04457 Middleton Ports,Lake Audreyhaven,Michigan,2025-01-18
+CUS000482,Tiffany Mcguire,ryan66@example.org,1277083573,1972-01-28,1938 Janet Lights,North Kimberly,Wisconsin,2025-05-11
+CUS000483,Tracy Woods,joehobbs@example.net,4248835303,1978-02-19,284 Sanchez Ferry Suite 672,East Williamport,Nevada,2024-04-08
+CUS000484,Angel Fisher,heathercruz@example.net,9685130653,2007-03-16,87323 Cameron Station Suite 248,South David,Delaware,2024-02-26
+CUS000485,Javier Vargas,tyler02@example.org,7538879093,1988-03-06,3660 Matthew Stream,Elizabethhaven,Alaska,2026-03-30
+CUS000486,Kelly Atkins,kimberly49@example.org,9945750094,1967-07-13,900 Wilson Corner,Jasonfurt,South Carolina,2025-11-29
+CUS000487,Rachael Rosario,cwilliams@example.org,790754358,1989-07-13,315 Kelly Islands,South Mary,Oregon,2026-03-14
+CUS000488,Amber Harris,charlessmith@example.com,8789719544,1997-07-16,948 Michael Flats Suite 709,West Ethanborough,Georgia,2025-07-27
+CUS000489,Judith Davis,ryan10@example.org,7200340352,1997-04-20,2265 Melissa Court,Theresaport,New Mexico,2022-12-19
+CUS000490,Aaron Ayers,brittneylittle@example.net,3162226564,1987-07-02,4629 Stacy Knoll,South Paul,Kansas,2024-09-22
+CUS000491,Stephanie Hawkins,austinryan@example.net,4632273629,1989-02-20,11785 Hendrix Brook Suite 276,Castroborough,Michigan,2022-08-24
+CUS000492,Zachary Collier,mholmes@example.org,9896342524,1997-12-08,5092 Christopher Station Suite 086,Lake Jamesside,Iowa,2021-09-20
+CUS000493,Yvonne Serrano,johnsonaustin@example.org,703447475,1994-01-21,6234 Henson Forest,East Randy,Texas,2022-12-17
+CUS000494,Alexis Ward,millerdavid@example.net,5977371928,2007-12-16,9630 James Expressway Apt. 352,Hudsonfort,Minnesota,2024-07-29
+CUS000495,James Simon,ywilson@example.org,869200304,1990-12-05,89813 Robert Junction,Duncanport,North Dakota,2021-07-23
+CUS000496,Julian Patel,hartmankimberly@example.net,6693674469,1973-01-14,6465 Joseph Mill Apt. 605,Kevinhaven,South Carolina,2025-02-28
+CUS000497,Casey Logan,jgonzalez@example.net,7349284891,1992-10-19,9575 Andrew Club,Mendozaburgh,Washington,2022-05-12
+CUS000498,Erica Mcknight,jessica37@example.net,4377027945,1974-06-04,343 Johnson Trail Apt. 994,North John,Maryland,2022-02-24
+CUS000499,Christopher Welch,jamesritter@example.org,131346244,1979-05-26,8663 Tara Trace,Peterbury,Delaware,2022-11-24
+CUS000500,Harry Moore,jacquelinebrooks@example.net,4141957930,2002-05-29,046 Brooke Cliff Apt. 815,Port Timothy,New Mexico,2024-01-14
