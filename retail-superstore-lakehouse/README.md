@@ -1,23 +1,24 @@
 # Secure Retail Data Lakehouse
 
 Batch pipeline that strips PII and cardholder data out of retail operational data before it reaches
-analysts. Records land with full names, street addresses, dates of birth, card numbers and CVVs. What
-comes out the far end is purchase trends keyed on an irreversible token.
+analysts. Records land with full names, street addresses, dates of birth, card numbers and CVVs. The
+Gold layer exposes only aggregates, with each customer reduced to an irreversible token.
 
 ```
 sql/create_tables.sql     Delta DDL for retail_db
-scripts/                  Databricks notebooks, exported as source
+scripts/                  the pipeline: four exported .py notebooks and three .ipynb notebooks
 data/                     output snapshot pulled down for review; nothing reads it
 ```
 
 ## Running this
 
-Built on Databricks and it only runs there. The files in `scripts/` are notebooks exported as
-source, carrying the `# Databricks notebook source` header and `# COMMAND ----------` cell markers.
-Import them through Workspace > Import > File and they reopen as notebooks. They use the injected
-`spark` and `dbutils` handles (there is no `SparkSession.builder` call anywhere in the codebase),
-read and write to a Unity Catalog Volume at `/Volumes/workspace/default/retail_data/`, and
-`create_tables.sql` leads with a `%sql` magic. None of that survives off-cluster.
+Built on Databricks and it only runs there. `scripts/` holds two forms of the same thing: the `.py`
+files are notebooks exported as source (`# Databricks notebook source` header, `# COMMAND ----------`
+cell markers), and the `.ipynb` files are notebooks proper. Import either through Workspace > Import >
+File. They use the injected `spark` and `dbutils` handles (there is no `SparkSession.builder` call
+anywhere in the codebase), read and write to a Unity Catalog Volume at
+`/Volumes/workspace/default/retail_data/`, and `create_tables.sql` leads with a `%sql` magic. None of
+that survives off-cluster.
 
 You need Unity Catalog enabled, a running cluster, `faker` on it (`%pip install faker`), and rights to
 create a Volume and database under `workspace.default`. The Volume must exist before anything else
@@ -30,13 +31,16 @@ Uncomment it, run it once, comment it back.
 |---|---|---|
 | 1 | [sql/create_tables.sql](sql/create_tables.sql) | creates `retail_db` and four Delta tables |
 | 2 | [scripts/data_generation.py](scripts/data_generation.py) | synthetic source data into `raw/` |
-| 3 | [scripts/data_loading.py](scripts/data_loading.py) | `raw/` into the Delta tables |
-| 4 | [scripts/data_quality.py](scripts/data_quality.py) | profiles `raw/`, writes nothing |
-| 5 | [scripts/data_cleaning.py](scripts/data_cleaning.py) | `raw/` into `clean/` |
-| 6 | masking notebook | `clean/` into `secure/` and `silver/`; not in this repo |
-| 7 | gold notebook | `silver/` into `gold/`; not in this repo |
+| 3 | [scripts/bronze_layer.ipynb](scripts/bronze_layer.ipynb) | copies `raw/` into `bronze/` |
+| 4 | [scripts/data_loading.py](scripts/data_loading.py) | `raw/` into the Delta tables |
+| 5 | [scripts/data_quality.py](scripts/data_quality.py) | profiles `raw/`, writes nothing |
+| 6 | [scripts/data_cleaning.py](scripts/data_cleaning.py) | `raw/` into `clean/` |
+| 7 | [scripts/silver_layer.ipynb](scripts/silver_layer.ipynb) | masks `clean/` into `silver/` |
+| 8 | [scripts/gold_layer.ipynb](scripts/gold_layer.ipynb) | aggregates `silver/` into `gold/` |
 
-Step 4 is a report and can be skipped or re-run at will. Steps 6 and 7 are covered below.
+The live path to Gold is generation, cleaning, silver, gold: `raw` to `clean` to `silver` to `gold`.
+Bronze (step 3), the Delta load (step 4) and the quality report (step 5) are side branches that
+nothing downstream reads, so they can be skipped or re-run without affecting Gold.
 
 ## The files
 
@@ -49,6 +53,10 @@ restrictions.
 seven thousand orders spread over two years, and one payment per order, written as headered CSV per
 dataset. It generates the worst case deliberately: exact dates of birth, street addresses, card
 numbers, CVVs.
+
+**bronze_layer.ipynb** loops the four datasets and rewrites each from `raw/` to `bronze/` unchanged,
+same schema and format. It is the medallion landing copy. Nothing in the current code reads `bronze/`
+back, so in practice it is a dead branch (see Loose ends).
 
 **data_loading.py** reads the four raw CSV directories with schema inference, appends them to the
 Delta tables, and prints a row count per table. It appends, so a second run doubles every table.
@@ -64,40 +72,35 @@ nothing.
 address with "Not Provided", drops orders missing any key, trims and initcaps names, cities, states
 and categories, normalises phone to `(XXX) XXX-XXXX`, drops rows whose email fails a regex, prints
 surviving counts, and writes CSV to `clean/`. Note it reads `raw/` rather than the Delta tables. The
-tables from step 3 are a parallel landing target, not an input to cleansing.
+tables from step 4 are a parallel landing target, not an input to cleansing.
 
-## Steps 6 and 7 are missing
+### silver_layer.ipynb
 
-`data/secure/`, `data/silver/` and `data/gold/` are fully populated, but the notebooks that produced
-them were never exported from the workspace. Steps 1 through 5 re-run end to end; the masking layer
-that gives this project its name does not. Export those two notebooks into `scripts/` and commit them.
+Reads `clean/`, applies the security transforms, writes Parquet to `silver/`. This is the layer that
+gives the project its name.
 
-Everything below is reconstructed from the output files. It is an accurate account of what ran and a
-usable spec for rebuilding it. It is not documentation of code you can execute today.
+Columns are dropped outright: `cvv`, which PCI-DSS forbids retaining at all; `dob`, replaced by a
+band; and `customer_id`, replaced by a token.
 
-### Masking
+Direct identifiers are masked. Values below are the actual output in `data/silver/`:
 
-Three things happen. Columns are dropped outright: `cvv`, which PCI-DSS forbids retaining at all;
-`dob`, replaced by a band; and `customer_id`, replaced by a token.
+| field | raw | stored | rule |
+|---|---|---|---|
+| `customer_name` | `Patrick Duran` | `P***` | first character, then `***` |
+| `email` | `ortegamatthew@example.org` | `o***@example.org` | first character, then `***@`, then the domain |
+| `phone` | `(930) 417-7541` | `(XXX) XXX-7541` | last four digits only |
+| `address` | `099 Patterson Station` | `*** Station` | last token only |
+| `customer_id` | `CUS000895` | `customer_token` | SHA-256, 64 hex |
+| `card_number` | full PAN | `************6075` | twelve stars, then last four |
 
-Direct identifiers are masked. Verified against `data/secure/customers/`:
+`customer_token` is `sha2(customer_id, 256)` and is applied to both customers and orders. SHA-256 is
+deterministic, so the two sides join, and per-customer aggregation survives while identity does not.
 
-| field | raw | stored |
-|---|---|---|
-| `customer_name` | `Patrick Duran` | `P***` |
-| `email` | `ortegamatthew@example.org` | `o***@example.org` |
-| `phone` | `(930) 417-7541` | `(XXX) XXX-7541` |
-| `address` | `099 Patterson Station` | `*** Station` |
-| `customer_id` | `CUS000895` | `customer_token`, SHA-256, 64 hex |
-| `card_number` | full PAN | `************6075` |
+Granular values are binned. Age from `dob`: under 25 is `18-24`, then `25-34`, `35-44`, `45-54`, and
+55 or over is `55+`. Payment amount into `spending_bucket`: under 1,000 is `Low`, under 5,000
+`Medium`, under 15,000 `High`, otherwise `Very High`.
 
-`customer_token` joins customers to orders to `customer_summary`, so per-customer aggregation
-survives while identity does not.
-
-Granular values are binned: age into `18-24`, `25-34`, `35-44`, `45-54`, `55+`; payment amount into a
-`spending_bucket` of `Low`, `Medium`, `High`, `Very High`.
-
-Silver, as Parquet:
+Silver output, as Parquet:
 
 | file | columns |
 |---|---|
@@ -106,12 +109,12 @@ Silver, as Parquet:
 | `payments_secure` | payment_id, order_id, card_number, amount, payment_date, payment_status, spending_bucket |
 | `products_clean` | product_id, product_name, category, cost_price, selling_price |
 
-`secure/` holds the same records as CSV; `silver/` is the Parquet the Gold layer reads. Products carry
-no PII and pass through untouched.
+Products carry no PII and are written straight through.
 
-### Gold
+### gold_layer.ipynb
 
-Five aggregates, all built from Silver, so none of them can expose an identity.
+Reads `silver/` and writes five aggregates to `gold/`. All are built from Silver, so none can expose
+an identity.
 
 | file | grain | columns |
 |---|---|---|
@@ -126,18 +129,24 @@ be segmented and ranked without being resolved to people.
 
 ## Access
 
-`secure/`, `silver/` and `gold/` are what analysts get. `raw/`, `bronze/`, `clean/` and everything in
-`retail_db` still hold unprotected identities and card data, and belong to the pipeline's service
-principal alone.
+`silver/` and `gold/` are what analysts get. `raw/`, `bronze/`, `clean/` and everything in `retail_db`
+still hold unprotected identities and card data, and belong to the pipeline's service principal alone.
 
 ## Loose ends
 
-The scripts write `raw/` and `clean/`, but the snapshot also carries a `bronze/` directory holding the
-same schema as `raw/`, a landing copy from an earlier run. The code and the directory layout
-disagree; settle it when the missing notebooks are exported.
+`bronze/` and the Delta tables are written but never read. The live path is `raw` to `clean` to
+`silver` to `gold`; `data_cleaning.py` reads `raw/` directly, so Bronze and the Delta load sit off to
+the side. Either wire Silver to read from Bronze so the medallion layering is real, or drop the two
+dead branches.
+
+`data/secure/` is not produced by any committed notebook. It holds the same masked records as `silver/`
+but as CSV, left over from an earlier version of the Silver step that wrote CSV before it switched to
+Parquet. Delete it, or fold it back in if a CSV copy is wanted.
 
 `data_generation.py` calls `random.seed(42)` but never `Faker.seed()`. The stdlib draws (categories,
 quantities, prices, status) are reproducible; everything Faker produces (names, emails, addresses,
 dates) differs on every run. Seed both if you want a stable dataset to test the masking layer against.
+
+The three `.ipynb` notebooks are untracked in git. Commit them so the pipeline is complete in the repo.
 
 All data is synthetic Faker output. No real customer data is in this repository.
