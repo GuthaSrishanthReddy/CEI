@@ -12,9 +12,6 @@ orders = spark.read.option("header", True).option("inferSchema", True) \
 payments = spark.read.option("header", True).option("inferSchema", True) \
     .csv("/Volumes/workspace/default/retail_data/raw/payments")
 
-
-# COMMAND ----------
-
 #schemas
 customers.printSchema()
 customers.show(5)
@@ -22,8 +19,6 @@ customers.show(5)
 products.printSchema()
 orders.printSchema()
 payments.printSchema()
-
-# COMMAND ----------
 
 #Null values check
 from pyspark.sql.functions import col, sum as spark_sum, when
@@ -40,8 +35,6 @@ null_report(products, "products")
 null_report(orders, "orders")
 null_report(payments, "payments")
 
-# COMMAND ----------
-
 #Duplicate Values check
 def duplicate_report(df, name, key_col):
     total = df.count()
@@ -55,8 +48,6 @@ duplicate_report(customers, "customers", "customer_id")
 duplicate_report(products, "products", "product_id")
 duplicate_report(orders, "orders", "order_id")
 duplicate_report(payments, "payments", "payment_id")
-
-# COMMAND ----------
 
 # Negative prices check
 invalid_prices = products.filter((col("cost_price") < 0) | (col("selling_price") < 0))
@@ -75,8 +66,6 @@ from pyspark.sql.functions import current_date
 future_signups = customers.filter(col("signup_date") > current_date())
 print("Future signup dates:", future_signups.count()) 
 
-# COMMAND ----------
-
 # Orders with invalid customers
 orphan_order_customers = orders.join(customers, "customer_id", "left_anti")
 print("Orders with invalid customer_id:", orphan_order_customers.count())
@@ -89,14 +78,9 @@ print("Orders with invalid product_id:", orphan_order_products.count())
 orphan_payments = payments.join(orders, "order_id", "left_anti")
 print("Payments with invalid order_id:", orphan_payments.count())
 
-
-# COMMAND ----------
-
 #Orders grouped by payement status
 orders.groupBy("status").count().show()
 orders.groupBy("status").agg({"total_amount": "sum"}).show()
-
-# COMMAND ----------
 
 #Finally Quality Summary
 from pyspark.sql import Row
@@ -125,6 +109,4 @@ summary_data = [
 
 quality_summary = spark.createDataFrame(summary_data)
 quality_summary.show()
-
-# COMMAND ----------
 

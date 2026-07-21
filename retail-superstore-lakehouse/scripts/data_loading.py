@@ -18,8 +18,6 @@ payments_spark.write.mode("append").saveAsTable("retail_db.payments")
 
 print("Data loaded.")
 
-# COMMAND ----------
-
 # MAGIC %sql
 # MAGIC SELECT 'customers' AS table_name, COUNT(*) AS row_count FROM retail_db.customers
 # MAGIC UNION ALL
@@ -28,6 +26,4 @@ print("Data loaded.")
 # MAGIC SELECT 'orders', COUNT(*) FROM retail_db.orders
 # MAGIC UNION ALL
 # MAGIC SELECT 'payments', COUNT(*) FROM retail_db.payments;
-
-# COMMAND ----------
 

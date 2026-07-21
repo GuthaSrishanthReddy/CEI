@@ -22,7 +22,7 @@ that survives off-cluster.
 
 You need Unity Catalog enabled, a running cluster, `faker` on it (`%pip install faker`), and rights to
 create a Volume and database under `workspace.default`. The Volume must exist before anything else
-runs; that code sits commented out at the top of [data_generation.py](scripts/data_generation.py#L11-L16).
+runs; that code sits commented out at the top of [data_generation.py](scripts/data_generation.py#L9-L14).
 Uncomment it, run it once, comment it back.
 
 ## Order

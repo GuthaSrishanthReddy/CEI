@@ -1,8 +1,6 @@
 # Databricks notebook source
 from pyspark.sql.functions import *
 
-# COMMAND ----------
-
 #load data
 customers = spark.read.option("header", True).option("inferSchema", True) \
     .csv("/Volumes/workspace/default/retail_data/raw/customers")
@@ -16,9 +14,6 @@ orders = spark.read.option("header", True).option("inferSchema", True) \
 payments = spark.read.option("header", True).option("inferSchema", True) \
     .csv("/Volumes/workspace/default/retail_data/raw/payments")
 
-# COMMAND ----------
-
-
 #TypeCasting
 customers = customers.withColumn("dob", to_date(col("dob"))) \
                       .withColumn("signup_date", to_date(col("signup_date")))
@@ -27,21 +22,15 @@ orders = orders.withColumn("order_date", to_date(col("order_date")))
 
 payments = payments.withColumn("payment_date", to_date(col("payment_date")))
 
-# COMMAND ----------
-
 #Duplicates Removal
 customers = customers.dropDuplicates(["customer_id"])
 products = products.dropDuplicates(["product_id"])
 orders = orders.dropDuplicates(["order_id"])
 payments = payments.dropDuplicates(["payment_id"])
 
-# COMMAND ----------
-
 #Handle Na
 customers = customers.na.fill({"phone": "Not Provided", "address": "Not Provided"})
 orders = orders.na.drop(subset=["order_id", "customer_id", "product_id"])  
-
-# COMMAND ----------
 
 #Formatting Names
 customers = customers.withColumn("customer_name", trim(initcap(col("customer_name"))))
@@ -64,8 +53,6 @@ customers = customers.withColumn(
     )
 )
 
-# COMMAND ----------
-
 #Validating and dropping invalid emails
 customers = customers.withColumn(
     "email_valid",
@@ -77,15 +64,11 @@ print("Invalid emails found:", invalid_email_count)
 
 customers = customers.filter(col("email_valid") == True).drop("email_valid")
 
-# COMMAND ----------
-
 #Verifying the row counts
 print("customers:", customers.count())
 print("products:", products.count())
 print("orders:", orders.count())
 print("payments:", payments.count())
-
-# COMMAND ----------
 
 #Save back the cleaned data
 customers.write.mode("overwrite").option("header", True) \
@@ -101,6 +84,4 @@ payments.write.mode("overwrite").option("header", True) \
     .csv("/Volumes/workspace/default/retail_data/clean/payments")
 
 print("Cleaned datasets saved.")
-
-# COMMAND ----------
 
