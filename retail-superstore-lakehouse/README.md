@@ -131,21 +131,5 @@ be segmented and ranked without being resolved to people.
 `silver/` and `gold/` are what analysts get. `raw/`, `bronze/`, `clean/` and everything in `retail_db`
 still hold unprotected identities and card data, and belong to the pipeline's service principal alone.
 
-## Loose ends
-
-`bronze/` and the Delta tables are written but never read. The live path is `raw` to `clean` to
-`silver` to `gold`; `data_cleaning.py` reads `raw/` directly, so Bronze and the Delta load sit off to
-the side. Either wire Silver to read from Bronze so the medallion layering is real, or drop the two
-dead branches.
-
-`data/secure/` is not produced by any committed notebook. It holds the same masked records as `silver/`
-but as CSV, left over from an earlier version of the Silver step that wrote CSV before it switched to
-Parquet. Delete it, or fold it back in if a CSV copy is wanted.
-
-`data_generation.py` calls `random.seed(42)` but never `Faker.seed()`. The stdlib draws (categories,
-quantities, prices, status) are reproducible; everything Faker produces (names, emails, addresses,
-dates) differs on every run. Seed both if you want a stable dataset to test the masking layer against.
-
-The three `.ipynb` notebooks are untracked in git. Commit them so the pipeline is complete in the repo.
 
 All data is synthetic Faker output. No real customer data is in this repository.
