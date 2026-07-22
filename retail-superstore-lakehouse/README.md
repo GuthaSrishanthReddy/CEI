@@ -13,8 +13,7 @@ data/                     output snapshot pulled down for review; nothing reads 
 ## Running this
 
 Built on Databricks and it only runs there. `scripts/` holds two forms of the same thing: the `.py`
-files are notebooks exported as source (`# Databricks notebook source` header, `# COMMAND ----------`
-cell markers), and the `.ipynb` files are notebooks proper. Import either through Workspace > Import >
+files are notebooks exported and the `.ipynb` files are notebooks proper. Import either through Workspace > Import >
 File. They use the injected `spark` and `dbutils` handles (there is no `SparkSession.builder` call
 anywhere in the codebase), read and write to a Unity Catalog Volume at
 `/Volumes/workspace/default/retail_data/`, and `create_tables.sql` leads with a `%sql` magic. None of
